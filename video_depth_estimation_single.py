@@ -73,7 +73,7 @@ while cap.isOpened():
 	freeDisk.append(psutil.disk_usage('/').free),
 	percentDisk.append(psutil.disk_usage('/').percent)
 
-	cpu.append(psutil.cpu_percent(percpu=True))
+	cpu.append(psutil.cpu_percent(percpu=True,interval=2))
 
 	# f.write(f"{total}\n")
 	# cv2.putText(cobined_image, str(psutil.virtual_memory()), (x + int(w / 10), y + int(h / 2)), cv2.FONT_HERSHEY_SIMPLEX, 0.7,
